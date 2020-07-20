@@ -1,0 +1,27 @@
+doctype
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        title Tambah Data
+    body
+        form(action="/tambah", method="post")
+            div 
+                label(for="nis") Nis
+            div
+                input(type="text", name="nis")
+            div 
+                label(for="nama") Nama
+            div
+                input(type="text", name="nama")
+            div 
+                label(for="kelas") Kelas
+            div
+                input(type="text", name="kelas")
+            div 
+                label(for="jurusan") Jurusan
+            div
+                input(type="text", name="jurusan")
+            div(style='margin-top:10px')
+                input(type="submit", value="Simpan")
+                input(type="button", value="Batal", onClick='javascript:history.go(-1)')
+            

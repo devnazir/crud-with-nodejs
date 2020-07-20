@@ -1,0 +1,29 @@
+doctype
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        title Belajar Crud dengan Node Js
+    body
+        h2 Data Siswa SMK DARUL MA'ARIF PAMANUKAN
+
+        table(border='1')
+            tr
+                th Nis
+                th Nama
+                th Kelas
+                th Jurusan
+                th(colspan=2) Aksi
+            
+            each siswa in data
+                tr
+                    td #{siswa['nis']}
+                    td #{siswa['nama']}
+                    td #{siswa['kelas']}
+                    td #{siswa['jurusan']}
+                    td 
+                        a(href='/ubah?nis=' + siswa['nis']) Ubah
+                    td 
+                        a(href='/hapus?nis=' + siswa['nis']) Hapus
+
+        p 
+            a(href='/tambah') Tambah Data

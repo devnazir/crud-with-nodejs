@@ -1,0 +1,27 @@
+doctype
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        title Edit Data
+    body
+        form(action="/ubah", method="post")
+            div 
+                label(for="nis") Nis
+            div
+                input(type="text", name="nis", value=siswa['nis'], readonly="true")
+            div 
+                label(for="nama") Nama
+            div
+                input(type="text", name="nama", value=siswa['nama'])
+            div 
+                label(for="kelas") Kelas
+            div
+                input(type="text", name="kelas", value=siswa['kelas'])
+            div 
+                label(for="jurusan") Jurusan
+            div
+                input(type="text", name="jurusan", value=siswa['jurusan'])
+            div(style='margin-top:10px')
+                input(type="submit", value="Simpan")
+                input(type="button", value="Batal", onClick='javascript:history.go(-1)')
+            
